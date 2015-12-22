@@ -239,10 +239,7 @@ sub _grok_indent_diff {
     $indentdiffs->{"t8"}++; # we can't infer what a tab means. Or rather, we need smarter code to do it
   }
   else { # mixed!
-    $diff =~ s/( +)$//;
-    my $trailing_spaces = $1||'';
-    $diff =~ s/ +//g; #  assume the spaces are all contained in tabs!
-    $indentdiffs->{"m" . (length($diff)*8+length($trailing_spaces))}++;
+    $indentdiffs->{"m" . _length_with_tabs_converted($diff)}++;
   }
 }
 
@@ -256,10 +253,7 @@ sub _analyse_indent_diff {
     return "t8"; # we can't infer what a tab means. Or rather, we need smarter code to do it
   }
   else { # mixed!
-    $diff =~ s/( +)$//;
-    my $trailing_spaces = $1||0;
-    $diff =~ s/ +//g; #  assume the spaces are all contained in tabs!
-    return "m" . (length($diff)*8+length($trailing_spaces));
+    return "m" . _length_with_tabs_converted($diff);
   }
 }
 
