@@ -1,4 +1,6 @@
 package Text::FindIndent;
+# -*- mode: Perl -*-
+# Emacs mode is necessary for https://github.com/github/linguist/issues/2458
 
 use 5.00503;
 use strict;
