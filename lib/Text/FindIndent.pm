@@ -680,6 +680,10 @@ Steffen Mueller E<lt>smueller@cpan.orgE<gt>
 
 Adam Kennedy E<lt>adamk@cpan.orgE<gt>
 
+=head1 REPOSITORY
+
+L<https://github.com/tsee/p5-Text-FindIndent>
+
 =head1 COPYRIGHT
 
 Copyright 2008 - 2010 Steffen Mueller.
