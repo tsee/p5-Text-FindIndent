@@ -1,4 +1,4 @@
-use inc::Module::Install::DSL 1.10;
+use inc::Module::Install::DSL 1.19;
 
 all_from      lib/Text/FindIndent.pm
 test_requires Test::More 0.80
