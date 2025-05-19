@@ -9,3 +9,5 @@ META.*
 MYMETA.*
 inc/
 Text-FindIndent-*
+.*.swp
+Makefile.old
